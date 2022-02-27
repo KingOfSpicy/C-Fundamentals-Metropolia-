@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+int largest(int first, int second, int third);
+intsmallest(int first, int second, int third);
+int main()
+{
+  int number1, number2, number3, largestnumber,smallestnumber;
+  cout << "Input the first integer";
+  cin >> number1;
+  cout << "Input the second integer:";
+  cin >> number2;
+  cout << "Input the third integer:";
+  cin >> number3;
+  largestnumber = largest(number1, number2, number3);
+  smallestnumber =smallest(number1, number2, number3);
+  cout << "The largest number was " << largestnumber;
+  cout << " and the smallest " <<smallestnumber << "." << endl;
+}
+int largest(int a, int b, int c)
+{
+	if(a>=b && a>=c){
+		return a;
+	}else if(b>=a && b>=c){
+		return b;
+	}else if(c>=a && c>=b){
+		return c;
+	}else{
+		return a;
+	}
+}
+int smallest(int a, int b, int c)
+{
+	if(a<=b && a<=c){
+		return a;
+	}else if(b<=a && b<=c){
+		return b;
+	}else if(c<=a && c<=b){
+		return c;
+	}else{
+		return a;
+	}
+}
